@@ -1,0 +1,68 @@
+<button class="button-64" onClick = "show()">執行</button>
+<div id = "text"></div>
+
+<!–--------- JS TODO: 請修改為更改背景顏色 –--------->
+<script>
+    let msg = ["你今天也好棒喔(灬ºωº灬)", "快要放假了好開心(✿ﾟ▽ﾟ)ノ", "欸欸 要一起來念書嗎(๑•̀ㅂ•́)و✧"];
+    let color = ["#C4E1FF","#C7C7E2","#E6CAFF"];
+	let i = 0;
+    
+    function show()
+    {
+    	document.getElementById("text").innerHTML = msg[i%3];
+		document.body.style.backgroundColor = color[i%3];
+    	++i;
+    }
+</script>
+
+<!–--------- CSS TODO: 請套用一種想要的按鈕(button)樣式 –--------->
+<style>
+.button-64 {
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button-64:active,
+.button-64:hover {
+  outline: 0;
+}
+
+.button-64 span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.button-64:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .button-64 {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
+</style>
